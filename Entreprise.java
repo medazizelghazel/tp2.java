@@ -1,8 +1,13 @@
 package tp2;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
+import java.util.TreeMap;
 
-public class Entreprise  {	
+public class Entreprise {	
 	HashMap<Integer, Département> Liste_Deps;
 	private String nomEntreprise;
 	
@@ -34,6 +39,7 @@ public class Entreprise  {
 	public boolean existeD(Département d) {
         return Liste_Deps.containsValue(d);
     }
+	/*
 	public void DepMinCapacity() {
 		Département minDep = null;
 	    for (Département dep : Liste_Deps.values()) {
@@ -41,8 +47,14 @@ public class Entreprise  {
 	            minDep = dep;
 	        }
 	    System.out.println("Le département avec la capacité minimale est: " + minDep.getId());
+	}}
+	*/
+	public void DepMinCapacity() {
+	    List<Département> ts = new ArrayList<>(Liste_Deps.values());
+	    Collections.sort(ts, new CapacityComparator());
+	    System.out.println(ts.get(0));
 	}
 
+
 	
-    }
 }

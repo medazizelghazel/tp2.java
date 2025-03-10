@@ -44,7 +44,15 @@ public class Département {
         return ts.last();
     }
 
+	@Override
+	public String toString() {
+		return "Département [id=" + id + ", LE=" + LE + "]";
+	}
+
 	public int getId() {
 		return id;
+	}
+	public int getNbEmployes() {
+		return LE.size();
 	}
 }

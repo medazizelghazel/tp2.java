@@ -21,7 +21,7 @@ public class Main1 {
 		d1.ajoutEmploye(e2);
 		d1.ajoutEmploye(e3);
 		en1.afficheE();
-		en1.UpdateDep(e1,2);
+		en1.UpdateDep(e4,1);
 		en1.afficheE();
 		System.out.println(en1.existeD(d2));
 		en1.DepMinCapacity();
